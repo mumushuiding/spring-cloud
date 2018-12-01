@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input: 
+          destination: partitioned.destination #必须与发送信号的app相同
+          group: myGroup
+          consumer:
+            instance-index: 0
